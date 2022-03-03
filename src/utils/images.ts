@@ -1,3 +1,6 @@
-export const getImage = (path: string) => {
-  return `http://localhost:1337${path}`;
+export const getImage = (path?: string) => {
+  if (!path) {
+    return '';
+  }
+  return `${process.env.NEXT_PUBLIC_IMAGE_URL}/${path}`;
 };
