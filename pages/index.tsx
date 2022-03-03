@@ -8,7 +8,7 @@ import {
 } from '../src/components';
 import { SectionBlockImage } from '../src/components/SectionBlockImage';
 
-const client = new GraphQLClient('http://localhost:1337/graphql');
+const client = new GraphQLClient(process.env.NEXT_PUBLIC_API!);
 
 const HomePage = ({ about }: any) => {
   const Component: any = {
