@@ -10,8 +10,8 @@ import { SectionBlockImage } from '../src/components/SectionBlockImage';
 
 const client = new GraphQLClient('http://localhost:1337/graphql');
 
-const HomePage = ({ about }) => {
-  const Component = {
+const HomePage = ({ about }: any) => {
+  const Component: any = {
     ComponentSectionBanner: SectionBanner,
     ComponentSectionBlockImageGroup: SectionBlockImageGroup,
     ComponentSectionBlockImage: SectionBlockImage,
@@ -21,8 +21,8 @@ const HomePage = ({ about }) => {
   return (
     <>
       <div className="space-y-20">
-        {about.content.map((section) => {
-          let Comp = Component[section.__typename];
+        {about.content.map((section: any) => {
+          let Comp: any = Component?.[section.__typename];
           if (!Comp) {
             return null;
           }
